@@ -1,0 +1,32 @@
+# Python virtual environments
+venv/
+*.env
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+*.ipynb_checkpoints
+
+# Data files - DO NOT COMMIT DATA
+data/raw/*
+data/processed/*
+# Keep the directories, but ignore their contents
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model files - DO NOT COMMIT MODELS
+models/baseline/*
+models/advanced/*
+# Keep the directories, but ignore their contents
+!models/baseline/.gitkeep
+!models/advanced/.gitkeep
+
+# Report/Presentation files (optional, but good practice for large files)
+*.pdf
+*.pptx
