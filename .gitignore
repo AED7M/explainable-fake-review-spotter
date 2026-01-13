@@ -20,12 +20,10 @@ data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
-# Model files - DO NOT COMMIT MODELS
-models/baseline/*
-models/advanced/*
-# Keep the directories, but ignore their contents
-!models/baseline/.gitkeep
-!models/advanced/.gitkeep
+# Model files - Commit trained models for cloud deployment
+# Uncomment below lines if models are too large for GitHub (>100MB)
+# models/baseline/*.pkl
+# models/advanced/*.pkl
 
 # Report/Presentation files (optional, but good practice for large files)
 *.pdf
