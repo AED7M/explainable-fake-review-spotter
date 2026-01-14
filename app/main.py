@@ -24,7 +24,7 @@ import pandas as pd
 
 from src.config import (
     MODELS_DIR,
-    STACKING_MODEL_PATH,
+    XGBOOST_MODEL_PATH,
     TEXT_COLUMN,
 )
 from src.preprocessing import (
@@ -121,7 +121,7 @@ async def lifespan(app: FastAPI):
     download_nltk_resources()
     
     # Load the trained model
-    model_path = STACKING_MODEL_PATH
+    model_path = XGBOOST_MODEL_PATH
     
     if not model_path.exists():
         print(f"⚠️  Warning: Model not found at {model_path}")
@@ -129,7 +129,7 @@ async def lifespan(app: FastAPI):
     else:
         print(f"📂 Loading model from: {model_path}")
         model_state.model = joblib.load(model_path)
-        model_state.model_name = "stacking_classifier"
+        model_state.model_name = "xgboost"
         print("✅ Model loaded successfully!")
     
     print("🟢 API is ready to serve requests!\n")
